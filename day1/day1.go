@@ -22,7 +22,8 @@ func main() {
 	for _, n := range valArray {
 		searchVal := 2020 - n
 		if findMatch(valArray, searchVal) {
-			fmt.Println("return value: ", searchVal*n)
+			fmt.Println("return value part 1:", searchVal*n)
+			break
 		}
 	}
 
@@ -43,8 +44,7 @@ func subsetSum(a []int, target int, partial []int) {
 
 	if sumPartial == target {
 		if len(partial) == 3 {
-			fmt.Println("sum of partial == target", partial, target)
-			fmt.Println(product(partial))
+			fmt.Println("return value part 2:", product(partial))
 			return
 		}
 
